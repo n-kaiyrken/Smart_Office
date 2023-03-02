@@ -1,12 +1,9 @@
-package com.example.smartoffice.presentation
+package com.example.smartoffice.data.network.model
 
 import com.google.gson.annotations.SerializedName
 
-data class TempResponse(
+data class HumidityResponseDTO(
     @SerializedName("created_at") val createdAt: String,
     @SerializedName("entry_id") val entryId: Int,
-    @SerializedName("field2") val field2: String
+    @SerializedName("field1") val field: String
 )
-
-
-

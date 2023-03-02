@@ -21,13 +21,14 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         viewModel.temperatureLivaData.observe(this) {
             binding.textViewTemp.text = it
+            Log.d("Chek", "Temperature: $it")
         }
         viewModel.humidityLivaData.observe(this) {
             binding.textViewHumidity.text = it
+            Log.d("Chek", "Humidity: $it")
         }
         binding.button.setOnClickListener {
-            Log.d("MyResponse", "${Thread.currentThread()}")
-            viewModel.getTemp()
+            viewModel.updateData()
         }
     }
 }
