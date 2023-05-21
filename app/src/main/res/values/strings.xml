@@ -1,6 +1,21 @@
 <resources>
     <string name="app_name">Smart Office</string>
-    <string name="update">Update</string>
-    <string name="temterature">Temterature</string>
-    <string name="humidity">Humidity</string>
+    <string name="employees_list">Список сотрудников</string>
+    <string name="unknowns_list">Список неизвестных карт</string>
+    <string name="temterature">Температура</string>
+    <string name="humidity">Влажность</string>
+    <string name="gas">Уровень газа</string>
+    <string name="next">Next</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="full_name">Имя:</string>
+    <string name="surname">Фамилия:</string>
+    <string name="age">Возраст:</string>
+    <string name="card_id">ID-карты:</string>
+    <string name="phone">Номер телефона:</string>
+    <string name="add">Добавить</string>
+    <string name="deleteDialogTitle">Удалить сотрудника</string>
+    <string name="deleteDialogDescription">Вы уверены, что хотите удалить этого сотрудника? Будет удалена вся информация о сотруднике включая историю посещений.</string>
+    <string name="yes">Да</string>
+    <string name="openDoor">Открыть дверь</string>
 </resources>

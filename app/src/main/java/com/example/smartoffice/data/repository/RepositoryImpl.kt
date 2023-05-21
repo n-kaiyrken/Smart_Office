@@ -1,26 +1,38 @@
 package com.example.smartoffice.data.repository
 
-import com.example.smartoffice.data.network.ApiFactory
-import com.example.smartoffice.data.network.Mapper
-import com.example.smartoffice.domain.HumidityResponse
+import com.example.smartoffice.data.network.FirebaseApi
+import com.example.smartoffice.domain.models.AirIndicators
 import com.example.smartoffice.domain.Repository
-import com.example.smartoffice.domain.TempResponse
+import com.example.smartoffice.domain.models.Employee
+import com.example.smartoffice.domain.models.UnknownId
 
-class RepositoryImpl: Repository {
+class RepositoryImpl : Repository {
 
-    private val apiService = ApiFactory.apiService
-
-    private val apiKey = "JYY2LMKB25152SU1"
-
-    private  val mapper = Mapper()
-
-    override suspend fun getLastTemp(): TempResponse {
-        val temp = mapper.mapDTOtoTempResponse(apiService.getLastTemp(apiKey))
-        return temp
+    private val firebaseApi = FirebaseApi()
+    override suspend fun addNewEmployee(employee: Employee) {
+        firebaseApi.addNewEmployee(employee)
     }
 
-    override suspend fun getLastHumidity(): HumidityResponse {
-        val humidity = mapper.mapDTOtoHumidityResponse(apiService.getLastHumidity(apiKey))
-        return humidity
+    override suspend fun deleteEmployee(employeeId: String) {
+        firebaseApi.deleteEmployee(employeeId)
+    }
+    override suspend fun openDoor() {
+        firebaseApi.openDoor()
+    }
+
+    override suspend fun getEmployees(onEmployeeLoaded: (List<Employee>) -> Unit) {
+        firebaseApi.getEmployees(onEmployeeLoaded)
+    }
+
+    override suspend fun getAirIndicators(onDataLoaded: (AirIndicators) -> Unit) {
+        firebaseApi.getAirIndicators(onDataLoaded)
+    }
+
+    override suspend fun getUnknownIds(onUnknownIdsLoaded: (List<UnknownId>) -> Unit) {
+        firebaseApi.getUnknownIds(onUnknownIdsLoaded)
+    }
+
+    override suspend fun getEmployeeAttendance(id: String, onEmployeeAttendanceLoaded: (List<Long>) -> Unit) {
+        firebaseApi.getEmployeeAttendance(id, onEmployeeAttendanceLoaded)
     }
 }

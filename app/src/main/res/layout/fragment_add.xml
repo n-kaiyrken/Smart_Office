@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.screens.AddFragment">
+
+    <TextView
+        android:id="@+id/full_name_label"
+        android:layout_width="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_height="48dp"
+        android:text="@string/full_name"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:inputType="text"
+        android:textSize="16sp"
+        android:hint="Enter full name"
+        app:layout_constraintStart_toEndOf="@+id/full_name_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/full_name_label"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp" />
+
+    <TextView
+        android:id="@+id/surname_label"
+        android:layout_width="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_height="48dp"
+        android:text="@string/surname"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/full_name_label"
+        app:layout_constraintTop_toBottomOf="@+id/full_name_label"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/editTextSurname"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:inputType="text"
+        android:textSize="16sp"
+        android:hint="Enter surname"
+        app:layout_constraintStart_toEndOf="@+id/surname_label"
+        app:layout_constraintEnd_toEndOf="@+id/editTextName"
+        app:layout_constraintTop_toTopOf="@+id/surname_label"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp" />
+
+    <TextView
+        android:id="@+id/age_label"
+        android:layout_width="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_height="48dp"
+        android:text="@string/age"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/surname_label"
+        app:layout_constraintTop_toBottomOf="@+id/surname_label"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/editTextAge"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:inputType="number"
+        android:textSize="16sp"
+        android:hint="Enter age"
+        app:layout_constraintStart_toEndOf="@+id/age_label"
+        app:layout_constraintEnd_toEndOf="@+id/editTextSurname"
+        app:layout_constraintTop_toTopOf="@+id/age_label"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp" />
+
+    <TextView
+        android:id="@+id/card_id_label"
+        android:layout_width="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_height="48dp"
+        android:text="@string/card_id"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/age_label"
+        app:layout_constraintTop_toBottomOf="@+id/age_label"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/editTextId"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:inputType="none"
+        android:textSize="16sp"
+        android:hint="Enter card ID"
+        app:layout_constraintStart_toEndOf="@+id/card_id_label"
+        app:layout_constraintEnd_toEndOf="@+id/editTextAge"
+        app:layout_constraintTop_toTopOf="@+id/card_id_label"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp" />
+
+    <TextView
+        android:id="@+id/job_label"
+        android:layout_width="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_height="48dp"
+        android:textSize="16sp"
+        android:text="@string/phone"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/card_id_label"
+        app:layout_constraintTop_toBottomOf="@+id/card_id_label"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:inputType="text"
+        android:textSize="16sp"
+        android:hint="Enter phone number"
+        app:layout_constraintStart_toEndOf="@+id/job_label"
+        app:layout_constraintEnd_toEndOf="@+id/editTextId"
+        app:layout_constraintTop_toTopOf="@+id/job_label"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp" />
+
+    <Button
+        android:id="@+id/button_add_employee"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/add"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/button_background"
+        android:elevation="8dp"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
